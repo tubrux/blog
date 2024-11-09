@@ -22,13 +22,9 @@ However, this thread safety comes at a cost: **performance**. Because of synchro
 Here’s an example of using `StringBuffer`:
 
 ```java
-public class StringBufferExample {
-    public static void main(String[] args) {
-        StringBuffer sb = new StringBuffer("Hello");
-        sb.append(" World!");
-        System.out.println(sb);  // Output: Hello World!
-    }
-}
+StringBuffer sb = new StringBuffer("Hello");
+sb.append(" World!");
+System.out.println(sb);  // Output: Hello World!
 ```
 
 In this example, we can see that the `append()` method is used to modify the string. This method is thread-safe, meaning it can safely be used by multiple threads in a concurrent environment.
@@ -42,18 +38,14 @@ If we don’t need thread safety (like in most single-threaded applications), `S
 Here’s an example of using `StringBuilder`:
 
 ```java
-public class StringBuilderExample {
-    public static void main(String[] args) {
-        StringBuilder sb = new StringBuilder("Hello");
-        sb.append(" World!");
-        System.out.println(sb);  // Output: Hello World!
-    }
-}
+StringBuilder sb = new StringBuilder("Hello");
+sb.append(" World!");
+System.out.println(sb);  // Output: Hello World!
 ```
 
 This is almost identical to the `StringBuffer` example, but behind the scenes, `StringBuilder` is not synchronizing its methods, making it more efficient.
 
-Maybe we need another scenario to show that it is not thread safe:
+Maybe we need another scenario to show that it is not thread safe. We assume this is using unit tests:
 
 ```java
 @RepeatedTest(100)
