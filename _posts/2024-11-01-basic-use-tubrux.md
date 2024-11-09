@@ -102,7 +102,7 @@ Once you have created an instance of `TubruxAnalyzer` and set the configurations
 
 The output from the analysis will show detailed reports about the potential vulnerabilities detected in your code. Here’s an example of what the output might look like:
 
-<img src="/Volumes/DATA/Projects/Web/blog-tubrux.github.io/_posts/example-output.png"/>
+<img src="https://github.com/tubrux/blog/blob/dark/_posts/example-output.png?raw=true"/>
 
 ### Conclusion
 
