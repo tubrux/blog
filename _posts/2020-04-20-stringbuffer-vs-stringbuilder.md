@@ -46,6 +46,72 @@ public class StringBuilderExample {
 
 This is almost identical to the `StringBuffer` example, but behind the scenes, `StringBuilder` is not synchronizing its methods, making it more efficient.
 
+Maybe we need another scenario to show that it is not thread safe:
+
+```Java
+@RepeatedTest(100)
+public void shouldIndicateStringBuilderIsNotThreadSafe() throws InterruptedException {
+    StringBuilder sharedBuilder = new StringBuilder();
+
+    Runnable appendTask = (String text) -> {
+        for (int i = 0; i < 1000; i++) {
+            append(sharedBuilder, text);
+        }
+    };
+
+    Thread thread1 = new Thread(() -> appendTask.run("1"));
+    Thread thread2 = new Thread(() -> appendTask.run("2"));
+    Thread thread3 = new Thread(() -> appendTask.run("A"));
+
+    thread1.start();
+    thread2.start();
+    thread3.start();
+
+    thread1.join();
+    thread2.join();
+    thread3.join();
+
+    System.out.println("sharedBuilder.length(): " + sharedBuilder.length() + 
+                       (sharedBuilder.length() != 3000 ? " ❌" : ""));
+}
+```
+
+This code shows `StringBuilder` is not thread-safe. Multiple threads (`thread1`, `thread2`, `thread3`) try to append to a single `StringBuilder` (`sharedBuilder`), creating race conditions where operations overlap and interfere with each other. Ideally, the final length should be `3000`, but due to unsynchronized access, it's often less, indicating lost or incomplete operations.
+
+```plain-text
+sharedBuilder.length():2933❌
+sharedBuilder.length():3000
+sharedBuilder.length():3000
+sharedBuilder.length():2851❌
+sharedBuilder.length():2391❌
+sharedBuilder.length():3000
+sharedBuilder.length():2954❌
+sharedBuilder.length():3000
+Exception caught: arraycopy: last destination index 36 out of bounds for byte[34]
+java.lang.StringBuilder
+sharedBuilder.length():2999❌
+sharedBuilder.length():2655❌
+sharedBuilder.length():3000
+sharedBuilder.length():3000
+sharedBuilder.length():3000
+sharedBuilder.length():3000
+```
+The output confirms that `StringBuilder` is not thread-safe. Each test run should ideally result in `sharedBuilder.length()` being exactly `3000`, but as we see, the length is sometimes less (e.g., `2933`, `2851`, `2391`). These discrepancies happen because multiple threads are modifying `sharedBuilder` simultaneously, causing some `append` operations to be lost or interrupted due to race conditions.
+
+The occasional exception, like `arraycopy: last destination index 36 out of bounds for byte[34]`, indicates that `StringBuilder` is experiencing issues with internal indexing. This usually happens when threads interfere with each other’s operations, causing unexpected state changes and breaking the internal structure of `StringBuilder`.
+
+The test cases that result in `3000` show what we'd expect in an ideal scenario, but the inconsistent results and exceptions confirm that `StringBuilder` cannot handle concurrent modifications safely. Switching to a thread-safe alternative like `StringBuffer` or adding synchronization would prevent these issues.
+
+To fix this, we can either switch to `StringBuffer`, which is thread-safe, or wrap `append` calls in a `synchronized` block:
+
+```java
+synchronized (sharedBuilder) {
+    append(sharedBuilder, "1");
+}
+```
+
+This way, we prevent interference and ensure reliable results.
+
 #### **When Should We Use StringBuffer or StringBuilder?**
 
 - **Use `StringBuffer`** when:
@@ -67,4 +133,6 @@ However, if we are working in a multi-threaded environment and need to ensure th
 - **StringBuffer** is thread-safe but slower due to synchronization. It’s the best option when thread safety is critical.
 - **StringBuilder** is faster and more efficient but not thread-safe. It’s ideal for single-threaded applications or situations where thread safety is not a concern.
 
-By understanding these differences, we can choose the right class for the job based on our needs.
+By understanding these differences, we can choose the right class for the job based on our needs. 
+
+By the way, by using the <a href="https://tubrux.github.io/">Tubrux</a> library, we can easily find non-thread-safe data structures in our project. So we can fix them as early as possible.
