@@ -58,7 +58,7 @@ This is almost identical to the `StringBuffer` example, but behind the scenes, `
 
 Maybe we need another scenario to show that it is not thread safe:
 
-```Java
+```java
 @RepeatedTest(100)
 public void shouldIndicateStringBuilderIsNotThreadSafe() throws InterruptedException {
     StringBuilder sharedBuilder = new StringBuilder();
@@ -88,7 +88,7 @@ public void shouldIndicateStringBuilderIsNotThreadSafe() throws InterruptedExcep
 
 This code shows `StringBuilder` is not thread-safe. Multiple threads (`thread1`, `thread2`, `thread3`) try to append to a single `StringBuilder` (`sharedBuilder`), creating race conditions where operations overlap and interfere with each other. Ideally, the final length should be `3000`, but due to unsynchronized access, it's often less, indicating lost or incomplete operations.
 
-```plain-text
+```h
 sharedBuilder.length():2933❌
 sharedBuilder.length():3000
 sharedBuilder.length():3000
