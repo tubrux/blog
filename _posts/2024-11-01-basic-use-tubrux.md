@@ -3,17 +3,16 @@ layout: post
 ---
 
 # Table of Contents
-- [How to Install and Use Tubrux for Analyzing Code Vulnerabilities](#how-to-install-and-use-tubrux-for-analyzing-code-vulnerabilities)
-  - [Minimum Requirements](#minimum-requirements)
-  - [Installation](#installation)
-    - [Installing Tubrux with Maven](#installing-tubrux-with-maven)
-    - [Installing Tubrux with Gradle](#installing-tubrux-with-gradle)
-  - [Using Tubrux in Your Java or Kotlin Project](#using-tubrux-in-your-java-or-kotlin-project)
-    - [Creating an Instance](#creating-an-instance)
-  - [Configuring Tubrux](#configuring-tubrux)
-  - [Running the Analysis](#running-the-analysis)
-    - [Example Output](#example-output)
-  - [Conclusion](#conclusion)
+- [Minimum Requirements](#minimum-requirements)
+- [Installation](#installation)
+  - [Installing Tubrux with Maven](#installing-tubrux-with-maven)
+  - [Installing Tubrux with Gradle](#installing-tubrux-with-gradle)
+- [Using Tubrux in Your Java or Kotlin Project](#using-tubrux-in-your-java-or-kotlin-project)
+  - [Creating an Instance](#creating-an-instance)
+- [Configuring Tubrux](#configuring-tubrux)
+- [Running the Analysis](#running-the-analysis)
+  - [Example Output](#example-output)
+- [Conclusion](#conclusion)
 
 ## How to Install and Use Tubrux for Analyzing Code Vulnerabilities
 
