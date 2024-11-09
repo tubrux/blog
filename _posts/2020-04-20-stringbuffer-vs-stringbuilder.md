@@ -2,6 +2,16 @@
 layout: post
 ---
 
+### Table of Contents
+1. [StringBuffer vs StringBuilder in Java: Which One Should We Use?](#stringbuffer-vs-stringbuilder-in-java-which-one-should-we-use)
+2. [StringBuffer: Thread-Safe But Slower](#stringbuffer-thread-safe-but-slower)
+3. [StringBuilder: Faster, But Not Thread-Safe](#stringbuilder-faster-but-not-thread-safe)
+4. [When Should We Use StringBuffer or StringBuilder?](#when-should-we-use-stringbuffer-or-stringbuilder)
+5. [Which One Should We Choose?](#which-one-should-we-choose)
+6. [Summary](#summary)
+
+---
+
 ### **StringBuffer vs StringBuilder in Java: Which One Should We Use?**
 
 When we work with strings in Java, we often need to modify them, such as appending, inserting, or deleting characters. However, Java strings are immutable, meaning every time we modify a string, a new object is created. To avoid this, we use mutable sequences of characters, namely `StringBuffer` and `StringBuilder`. But, how do we decide which one to use? Let’s break it down!
