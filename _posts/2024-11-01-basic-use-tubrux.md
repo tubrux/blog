@@ -1,8 +1,9 @@
 ---
 layout: post
 ---
+## How to Install and Use Tubrux for Analyzing Code Vulnerabilities
 
-# Table of Contents
+##### Table of Contents
 - [Minimum Requirements](#minimum-requirements)
 - [Installation](#installation)
   - [Installing Tubrux with Maven](#installing-tubrux-with-maven)
@@ -13,8 +14,6 @@ layout: post
 - [Running the Analysis](#running-the-analysis)
   - [Example Output](#example-output)
 - [Conclusion](#conclusion)
-
-## How to Install and Use Tubrux for Analyzing Code Vulnerabilities
 
 Tubrux is a powerful Java library designed to help developers analyze vulnerabilities in their code, specifically focusing on thread-safety issues and other potential security flaws in Java and Kotlin applications. This article will guide you through the process of installing and using Tubrux in your project.
 

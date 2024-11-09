@@ -20,7 +20,7 @@ layout: default
       <a class="post-link" href="{{ post.url | absolute_url }}" title="{{ post.title }}">{{ post.title | escape }}</a>
     </h2>
     <p>
-    <!-- {{ post.excerpt | markdownify | truncatewords: 10 }} -->
+    <!-- {{ post.excerpt | markdownify | truncatewords: 3 }} -->
     {{ post.excerpt | truncatewords: 10 }}
     </p>
 
