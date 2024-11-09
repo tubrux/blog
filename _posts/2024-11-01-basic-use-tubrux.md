@@ -14,7 +14,6 @@ layout: post
   - [Running the Analysis](#running-the-analysis)
     - [Example Output](#example-output)
   - [Conclusion](#conclusion)
----
 
 ## How to Install and Use Tubrux for Analyzing Code Vulnerabilities
 
