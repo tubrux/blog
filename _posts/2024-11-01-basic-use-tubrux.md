@@ -24,7 +24,7 @@ Tubrux is a powerful Java library designed to help developers analyze vulnerabil
 
 #### Installing Tubrux with Maven
 
-1. Add the following dependency to your `pom.xml` file:
+Add the following dependency to your `pom.xml` file:
 
 ```xml
 <repositories>
@@ -43,11 +43,11 @@ Tubrux is a powerful Java library designed to help developers analyze vulnerabil
 </dependencies>
 ```
 
-2. After adding the dependency, Maven will automatically download and include Tubrux in your project.
+After adding the dependency, Maven will automatically download and include Tubrux in your project.
 
 #### Installing Tubrux with Gradle
 
-1. Add the following to your `build.gradle` file:
+Add the following to your `build.gradle` file:
 
 ```groovy
 repositories {
@@ -59,7 +59,7 @@ dependencies {
 }
 ```
 
-2. Gradle will handle the installation and integrate Tubrux into your project.
+Gradle will handle the installation and integrate Tubrux into your project.
 
 ### Using Tubrux in Your Java or Kotlin Project
 
