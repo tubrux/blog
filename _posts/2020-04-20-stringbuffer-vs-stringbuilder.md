@@ -48,6 +48,15 @@ This is almost identical to the `StringBuffer` example, but behind the scenes, `
 Maybe we need another scenario to show that it is not thread safe. We assume this is using unit tests:
 
 ```java
+void append(Appendable appendable, String string) {
+    try {
+        appendable.append(string);
+    } catch (Exception e) {
+        System.out.println("Exception caught: " + e.getMessage());
+        System.out.println(appendable.getClass().getTypeName());
+    }
+}
+
 @RepeatedTest(100)
 public void shouldIndicateStringBuilderIsNotThreadSafe() throws InterruptedException {
     StringBuilder sharedBuilder = new StringBuilder();
