@@ -8,14 +8,14 @@ layout: post
 - [Installation](#installation)
   - [Installing Tubrux with Maven](#installing-tubrux-with-maven)
   - [Installing Tubrux with Gradle](#installing-tubrux-with-gradle)
-- [Using Tubrux in Your Java or Kotlin Project](#using-tubrux-in-your-java-or-kotlin-project)
+- [Using Tubrux in our Java or Kotlin Project](#using-tubrux-in-our-java-or-kotlin-project)
   - [Creating an Instance](#creating-an-instance)
 - [Configuring Tubrux](#configuring-tubrux)
 - [Running the Analysis](#running-the-analysis)
   - [Example Output](#example-output)
 - [Conclusion](#conclusion)
 
-Tubrux is a powerful Java library designed to help developers analyze vulnerabilities in their code, specifically focusing on thread-safety issues and other potential security flaws in Java and Kotlin applications. This article will guide you through the process of installing and using Tubrux in your project.
+Tubrux is a powerful Java library designed to help developers analyze vulnerabilities in their code, specifically focusing on thread-safety issues and other potential security flaws in Java and Kotlin applications. This article will guide we through the process of installing and using Tubrux in our project.
 
 ### Minimum Requirements
 - **Java 8** or higher
@@ -24,7 +24,7 @@ Tubrux is a powerful Java library designed to help developers analyze vulnerabil
 
 #### Installing Tubrux with Maven
 
-Add the following dependency to your `pom.xml` file:
+Add the following dependency to our `pom.xml` file:
 
 ```xml
 <repositories>
@@ -43,11 +43,11 @@ Add the following dependency to your `pom.xml` file:
 </dependencies>
 ```
 
-After adding the dependency, Maven will automatically download and include Tubrux in your project.
+After adding the dependency, Maven will automatically download and include Tubrux in our project.
 
 #### Installing Tubrux with Gradle
 
-Add the following to your `build.gradle` file:
+Add the following to our `build.gradle` file:
 
 ```groovy
 repositories {
@@ -59,13 +59,13 @@ dependencies {
 }
 ```
 
-Gradle will handle the installation and integrate Tubrux into your project.
+Gradle will handle the installation and integrate Tubrux into our project.
 
-### Using Tubrux in Your Java or Kotlin Project
+### Using Tubrux in our Java or Kotlin Project
 
 #### Creating an Instance
 
-To start using Tubrux, you need to create an instance of the main class where the analysis will be performed.
+To start using Tubrux, we need to create an instance of the main class where the analysis will be performed.
 
 In **Java**, the following example demonstrates how to create an instance of the main class:
 
@@ -93,7 +93,7 @@ fun main() {
 
 ### Configuring Tubrux
 
-Tubrux offers several configuration options to customize the analysis based on your needs. You can configure these options before running the analysis.
+Tubrux offers several configuration options to customize the analysis based on our needs. we can configure these options before running the analysis.
 
 The following options are available for configuration:
 
@@ -107,14 +107,14 @@ The following options are available for configuration:
 
 ### Running the Analysis
 
-Once you have created an instance of `TubruxAnalyzer` and set the configurations, you can perform the analysis on your codebase. The analysis will check for vulnerabilities related to thread safety, deadlocks, sensitive data exposure, and more.
+Once we have created an instance of `Tubrux` and set the configurations, we can perform the analysis on our codebase. The analysis will check for vulnerabilities related to thread safety, deadlocks, sensitive data exposure, and more.
 
 #### Example Output
 
-The output from the analysis will show detailed reports about the potential vulnerabilities detected in your code. Here’s an example of what the output might look like:
+The output from the analysis will show detailed reports about the potential vulnerabilities detected in our code. Here’s an example of what the output might look like:
 
 <img src="https://github.com/tubrux/blog/blob/dark/_posts/example-output.png?raw=true"/>
 
 ### Conclusion
 
-Tubrux is a valuable tool for any Java or Kotlin developer looking to ensure the security and thread-safety of their code. With easy installation via Maven or Gradle, flexible configuration options, and detailed vulnerability analysis reports, Tubrux can help you identify and mitigate potential risks in your codebase effectively.
+Tubrux is a valuable tool for any Java or Kotlin developer looking to ensure the security and thread-safety of their code. With easy installation via Maven or Gradle, flexible configuration options, and detailed vulnerability analysis reports, Tubrux can help we identify and mitigate potential risks in our codebase effectively.
