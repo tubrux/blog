@@ -10,7 +10,8 @@ layout: post
   - [Solution](#solution)
 - [4. Deadlock](#3-deadlock)
   - [Example Deadlock Scenario](#example-deadlock-scenario)
-- [5. Conclusion](#5-conclusion)
+- [5. Early Prevention of Thread-Safety Issues with Tubrux](#5-early-prevention-of-thread-safety-issues-with-tubrux)
+- [6. Conclusion](#6-conclusion)
 
 ### 1. Overview
 Thread-safety issues typically occur when multiple threads access or modify shared data without proper synchronization, leading to unpredictable outcomes.
@@ -46,6 +47,8 @@ Each thread updates `counter` without synchronization, so the expected final res
 ### 3. ConcurrentModificationException
 This exception arises when a collection is modified (e.g., adding or removing elements) during an iteration in a multi-threaded environment. Collections like `MutableList`, `MutableSet`, and `MutableMap` throw this exception when modified structurally during iteration.
 
+<img src="https://github.com/tubrux/blog/blob/dark/_posts/cur-modif.png?raw=true"/>
+
 **Solution:** Use `assertFailsWith<ConcurrentModificationException>` in JUnit to validate this exception in a single-thread context. In multi-threaded contexts, the exception becomes even more likely, risking application crashes.
 
 ### 4. Deadlock
@@ -65,5 +68,12 @@ Waiting for <---- Lock C    Waiting for <---- Lock A    Waiting for <---- Lock B
 
 Just imagine, in a financial application that processes transactions, if a deadlock occurs, the transaction will not be completed and can potentially cause lost transaction data.
 
-### 5. Conclusion
+### 5. Early Prevention of Thread-Safety Issues with Tubrux
+
+Tubrux provides automatic analysis for potential thread-safety issues in Java and Kotlin code, helping developers detect and prevent problems like race conditions, deadlocks, and concurrent modification exceptions before they become issues in production environments. By using Tubrux, developers can statically analyze their code to identify potentially unsafe data structures in multi-threaded contexts, and receive recommendations for proper synchronization. This enables early prevention and faster fixes, reducing the risk of hard-to-diagnose bugs during testing or deployment stages.
+
+<img src="https://github.com/tubrux/blog/blob/dark/_posts/example-output.png?raw=true"/>
+
+
+### 6. Conclusion
 In summary, Kotlin provides multiple approaches to ensure thread-safety through data structures and synchronization mechanisms. By selecting the appropriate method, developers can mitigate risks like race conditions, `ConcurrentModificationException`, and deadlocks in multi-threaded applications.
