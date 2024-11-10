@@ -1,5 +1,5 @@
-title: Tubrux | Blog
-description: Talking About Kotlin and Java with tubrux
+title: Blog
+description: Talking About Kotlin and Java with Tubrux
 # show_downloads: true
 
 baseurl: "/blog" # change this to the subpath of your site, e.g. /blog. Leave it empty if you don't need it.
