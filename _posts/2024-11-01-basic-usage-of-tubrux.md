@@ -38,7 +38,7 @@ Add the following dependency to our `pom.xml` file:
     <dependency>
         <groupId>io.tubrux</groupId>
         <artifactId>tubrux</artifactId>
-        <version>0.0.2-SNAPSHOT</version>
+        <version>0.0.2</version>
     </dependency>
 </dependencies>
 ```
@@ -55,7 +55,7 @@ repositories {
 }
 
 dependencies {
-    implementation 'io.tubrux:tubrux:0.0.2-SNAPSHOT'
+    implementation 'io.tubrux:tubrux:0.0.2'
 }
 ```
 
