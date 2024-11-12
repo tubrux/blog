@@ -22,6 +22,8 @@ Tubrux is a powerful Java library designed to help developers analyze vulnerabil
 
 ### Installation
 
+First, please see the <a target="_blank" href="https://tubrux.github.io/blog/2024/10/10/release-histories.html">latest version</a>.
+
 #### Installing Tubrux with Maven
 
 Add the following dependency to our `pom.xml` file:
