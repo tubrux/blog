@@ -14,7 +14,7 @@ layout: post
 - XSS detection
 - Fix some issues
 
-<hr/>
+---
 <br/>
 <img src="https://img.shields.io/badge/Version-0.0.2-purple" alt="Version">
 <br/>
@@ -26,7 +26,7 @@ layout: post
 - Sensitive data detection
 - Fix some issues
 
-<hr/>
+---
 <br/>
 <img src="https://img.shields.io/badge/Version-0.0.2--SNAPSHOT-blue" alt="Version">
 <br/>
