@@ -9,6 +9,7 @@ layout: post
 
 #### Release Date
 - 2024 Nov, 12
+
 #### Changes Log :
 - XSS detection
 - Fix some issues
@@ -20,6 +21,7 @@ layout: post
 
 #### Release Date
 - 2024 Nov, 01
+
 #### Changes Log :
 - Sensitive data detection
 - Fix some issues
@@ -31,6 +33,7 @@ layout: post
 
 #### Release Date
 - 2024 Okt, 10
+
 #### Changes Log :
 - Deadlock detection on Unit Test
 - Non thread-safe data structures detection
