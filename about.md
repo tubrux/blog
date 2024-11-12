@@ -7,6 +7,8 @@ ref: about
 order: 0
 ---
 
+<img src="https://github.com/tubrux/blog/blob/dark/_posts/ilustrasi.webp?raw=true"/>
+
 <a href="https://www.linkedin.com/in/hanggaajisayekti/" target="_blank">Hangga Aji Sayekti</a> is a dedicated software engineer from Indonesia with a strong passion for technology and science. With over 15 years of experience in the field since 2008, he has developed deep expertise in Java, Kotlin, and other programming languages. Holding a bachelor’s degree in Mathematics, Hangga combines analytical skills with a keen interest in scientific and computational concepts.
 
 Currently, Hangga is focused on building a <a target="_blank" href="https://github.com/kredibel-id/VisionSample-Android">Liveness Detection SDK</a> with Java and Kotlin, aiming to create secure and high-performance solutions for identity verification. His dedication to continuous improvement and security in code reflects his approach to tackling challenges in both software engineering and AI especially in ML.
