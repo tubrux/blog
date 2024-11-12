@@ -117,6 +117,10 @@ The output from the analysis will show detailed reports about the potential vuln
 
 <img src="https://github.com/tubrux/blog/blob/dark/_posts/example-output.png?raw=true"/>
 
+### Attention, please
+
+It is important to note that this library is very useful for the development stage. But because tubrux works by checking each line of code, it is **not recommended for the production stage**.
+
 ### Conclusion
 
 Tubrux is a valuable tool for any Java or Kotlin developer looking to ensure the security and thread-safety of their code. With easy installation via Maven or Gradle, flexible configuration options, and detailed vulnerability analysis reports, Tubrux can help we identify and mitigate potential risks in our codebase effectively.
