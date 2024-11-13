@@ -19,7 +19,10 @@ layout: default
     <h2>
       <a class="post-link" href="{{ post.url | absolute_url }}" title="{{ post.title }}">{{ post.title | escape }}</a>
     </h2>
-    {{ post.excerpt | markdownify | truncatewords: 3 }}
+    <a class="post-link" href="{{ post.url | absolute_url }}" title="{{ post.title }}">
+      {{ post.excerpt | markdownify | truncatewords: 6 }}
+    </a>
+
   
     <br/><br/>
   {% endfor %}
