@@ -1,6 +1,8 @@
 ---
 layout: post
 ---
+<img src="https://github.com/tubrux/blog/blob/dark/_posts/owasp.webp?raw=true"/>
+
 **Implementing OWASP in Java and Kotlin: A Guide to Building Secure Applications**
 
 In today’s digital landscape, security isn't just a "nice-to-have"—it's a necessity. Whether we’re building applications in Java or Kotlin, there are risks we have to account for, from SQL injections to cross-site scripting (XSS). This is where the Open Web Application Security Project (OWASP) comes in, offering us practical guidelines, tools, and frameworks to secure our applications. 
